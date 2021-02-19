@@ -80,13 +80,26 @@ runGarden loop@(Loop out) = do
 runGarden NL = do
   liftIO $ putStrLn ""
 
+shell :: IO ()
+shell = do
+  putStrLn ""
+  putStr "> "
+  i <- getLine
+  case parse parseGarden "" i of
+      Left e -> print e
+      Right out -> evalStateT (runGardens out) (0, 0)
+  shell
+
 main :: IO ()
 main = do
   args <- getArgs
-  let fileName = head args
-  file <- openFile fileName ReadMode
-  contents <- hGetContents file
-  case parse parseGarden fileName contents of
-    Left e -> print e
-    Right out -> evalStateT (runGardens out) (0, 0)
+  if null args then
+    shell
+    else do
+      let fileName = head args
+      file <- openFile fileName ReadMode
+      contents <- hGetContents file
+      case parse parseGarden fileName contents of
+        Left e -> print e
+        Right out -> evalStateT (runGardens out) (0, 0)
 --    Right out -> print out
