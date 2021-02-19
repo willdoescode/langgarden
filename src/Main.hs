@@ -62,7 +62,9 @@ runGardens = mapM_ runGarden
 runGarden Print = do
   (stack, _) <- get
   liftIO $ putChar $ toEnum $ fromIntegral stack
---  liftIO $ print $ stack
+  if debug then
+    liftIO $ print stack
+  else liftIO $ putStr ""
 
 runGarden Add = modify (\(stack, loopStack) -> (toEnum $ fromIntegral $ stack + 1, loopStack))
 runGarden Sub = modify (\(stack, loopStack) -> (stack - 1, loopStack))

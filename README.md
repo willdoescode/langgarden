@@ -12,4 +12,10 @@
 * [ Increase loop stack See [examples](https://github.com/willdoescode/langgarden/blob/main/examples/loop_example.garden) for loop example
 * ] Decrease loop stack
 
+## Things to note.
+* Anything other than the correct characters will be skipped over as a comment
+* There are two stacks, the loop stack, and the general stack
+* Once a loop stack hits zero the loop will stop
+* The value in the stack corresponds to the ascii character value
+
 The loop stack is separate from the general stack
