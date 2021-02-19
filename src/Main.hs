@@ -82,18 +82,19 @@ runGarden NL = do
 
 shell :: IO ()
 shell = do
-  putStrLn ""
-  putStr "> "
   i <- getLine
   case parse parseGarden "" i of
-      Left e -> print e
-      Right out -> evalStateT (runGardens out) (0, 0)
-  shell
+      Left e -> do
+         print e
+         shell
+      Right out -> do
+        evalStateT (runGardens out) (0, 0)
+        shell
 
 main :: IO ()
 main = do
   args <- getArgs
-  if null args then
+  if null args then do
     shell
     else do
       let fileName = head args
