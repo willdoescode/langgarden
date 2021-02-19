@@ -1,1 +1,7 @@
-[[[[[[[[[@{{{{{{{{{{]#{{{{{{{| loop example to get to a
+Add 9 to loop stack [[[[[[[[[
+Start loop @
+Add 10 to general stack every loop {{{{{{{{{{
+Decrease one from Loop Stack every loop ]
+End of loop #
+Add 7 to regular stack {{{{{{{
+Print out stack results |
