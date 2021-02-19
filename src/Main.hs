@@ -44,7 +44,7 @@ gardenInstruction = do
 parseGarden :: Parser [Gardens]
 parseGarden = many gardenInstruction
 
-type GardenRunner = StateT (Word8) IO ()
+type GardenRunner = StateT Word8 IO ()
 runGarden :: Gardens -> GardenRunner
 runGardens :: [Gardens] -> GardenRunner
 runGardens = mapM_ runGarden
