@@ -1,0 +1,23 @@
+name:                langgarden
+version:             0.1.0.0
+description:         The esolang you probably don't need
+homepage:            https://github.com/willdoescode/langgarden
+license:             APGL-3.0
+license-file:        LICENSE
+author:              William Lane
+maintainer:          williamlane923@gmail.com
+copyright:           2021 William Lane
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable langgarden
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                       , text
+                       , parsec
+                       , mtl
+                       , containers
