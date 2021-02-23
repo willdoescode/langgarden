@@ -77,8 +77,7 @@ runGarden loop@(Loop out) = do
     0 -> return ()
     _ -> runGardens out >> runGarden loop
 
-runGarden NL = do
-  liftIO $ putStrLn ""
+runGarden NL = liftIO $ putStrLn ""
 
 shell :: IO ()
 shell = do

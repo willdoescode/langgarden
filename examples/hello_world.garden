@@ -2,7 +2,7 @@
 }}} | Move 3 back to e
 [[ @ {{{ ] # { || Use loops to get to l
 {{{ | Move up 3 to get to o
-[[[[[[[[ @ }}}}}}}}}} ] # { | Use loops to decrease general stack to <Space>
+[[[[[[[[ @ }}}}}}}}}} ] # { | Use loops to decrease general stack to Space
 [[[[[[[[ @ {{{{{{{{{{ ] # {{{{{{{ | Increase the general stack back to w
 [[ @ }}}} ] # | Move stack to o
 {{{ | Move stack to r
