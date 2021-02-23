@@ -1,3 +1,13 @@
-[[[[[[[[[[ @ {{{{{{{{{{ ] # {{{{ | }}} | [[ @ {{{ ] # { || {{{ |[[[[[[[[ @ }}}}}}}}}} ] # { |[[[[[[[[ @ {{{{{{{{{{ ] # {{{{{{{ | [[ @ }}}} ] # | {{{ | [[ @ }}} ] # | [[ @ }}}} ] # |>
+[[[[[[[[[[ @ {{{{{{{{{{ ] # {{{{ | Use loop stack + general stack to get to h
+}}} | Move 3 back to e
+[[ @ {{{ ] # { || Use loops to get to l
+{{{ | Move up 3 to get to o
+[[[[[[[[ @ }}}}}}}}}} ] # { | Use loops to decrease general stack to <Space>
+[[[[[[[[ @ {{{{{{{{{{ ] # {{{{{{{ | Increase the general stack back to w
+[[ @ }}}} ] # | Move stack to o
+{{{ | Move stack to r
+[[ @ }}} ] # | Move stack to l
+[[ @ }}}} ] # | Move stack to d
+> Print out new line
 
 This hello world uses loops to get to characters making it much smaller
